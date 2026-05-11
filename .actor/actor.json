@@ -1,0 +1,13 @@
+{
+  "actorSpecification": 1,
+  "name": "pypi-downloads-tools",
+  "version": "0.1",
+  "buildTag": "latest",
+  "title": "PyPI Downloads Tool Server (MCP-compatible)",
+  "description": "Fetch PyPI package metadata + download stats via tool-style invocations. Pick one tool per run: package_details, download_stats, top_packages, or search_packages.",
+  "categories": ["DEVELOPER_TOOLS", "AI"],
+  "input": "./input_schema.json",
+  "minMemoryMbytes": 128,
+  "maxMemoryMbytes": 512,
+  "dockerfile": "./Dockerfile"
+}

@@ -1,0 +1,29 @@
+{
+  "title": "PyPI Downloads Tool Server input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "tool": {
+      "title": "Tool to invoke",
+      "type": "string",
+      "editor": "select",
+      "enum": ["package_details", "download_stats", "top_packages", "search_packages"],
+      "enumTitles": [
+        "package_details — fetch a PyPI package's metadata (optionally with recent releases)",
+        "download_stats — recent (day/week/month) or overall download counts",
+        "top_packages — top 30d or top 365d most-downloaded packages",
+        "search_packages — search PyPI by query"
+      ],
+      "description": "One tool per run. The Actor charges per tool call event.",
+      "default": "package_details"
+    },
+    "args": {
+      "title": "Tool arguments",
+      "type": "object",
+      "editor": "json",
+      "description": "JSON args specific to the selected tool. See README.",
+      "example": { "name": "requests" }
+    }
+  },
+  "required": ["tool"]
+}
